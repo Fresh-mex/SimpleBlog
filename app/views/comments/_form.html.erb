@@ -1,14 +1,13 @@
-<h1>Add Posts</h1>
-<br />
-<%= form_for :posts, url: posts_path do |f| %>
+<h3>Add Comment</h3>
+<%= form_for [@post, @post.comments.build] do |f| %>
   <% if @post.errors.any?  %>
     <% @post.errors.full_messages.each do |msg| %>
       <div class="alert alert-danger"><%= msg %> </div>
-      <% end %>
     <% end %>
+  <% end %>
   <p>
-    <%= f.label :title %>:
-    <%= f.text_field(:title, {:class => 'form-control'}) %>
+    <%= f.label :username %>:
+    <%= f.text_field(:username, {:class => 'form-control'}) %>
   </p>
   <p>
     <%= f.label :body %>:
