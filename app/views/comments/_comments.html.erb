@@ -3,7 +3,7 @@
   <div class="card card-body bg-light">
     <p><strong><%= comment.username %></strong>: <%= comment.body %></p>
 
-      <%= link_to "[X]", post_comment_path(@post),
+      <%= link_to "[X] Delete", [comment.post, comment],
                                               method: :delete,
                                               data: {confirm: 'Are you sure?'}
                                                %>
