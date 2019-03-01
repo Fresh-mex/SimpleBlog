@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  http_basic_authenticate_with name: "Justin", password:"1234", exept: [:index, :show]
+
   def index
     @post = Post.all
   end
