@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SimpleApp</title>
+    <title>SimpleBlog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -33,9 +33,13 @@
     </div>
   </div>
 </nav>
-<br/>
+<br />
+
+
 
 <div class="container">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
   <%= yield %>
 </div>
 <body>
